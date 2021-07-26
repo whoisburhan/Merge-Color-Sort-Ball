@@ -13,6 +13,8 @@ namespace GS.MergerColorSortBall
 
         [HideInInspector] public GameObject CurrentBall;
 
+        [SerializeField] private ParticleSystem OnBallDestroyParticle;
+
         [SerializeField] private GameObject[] ballPrefabs;
 
         [Header("Initlize Amount")]
@@ -97,6 +99,20 @@ namespace GS.MergerColorSortBall
                     _ball.BallNo = SpawnObjectNo;
                     _ball.IsDetectable = true;
                 }
+            }
+            else
+            {
+                OnBallDestroyParticleSpawn();
+            }
+        }
+
+        private void OnBallDestroyParticleSpawn()
+        {
+            if (OnBallDestroyParticle != null)
+            {
+                if (OnBallDestroyParticle.isPlaying)
+                    OnBallDestroyParticle.Stop();
+                OnBallDestroyParticle.Play();
             }
         }
     }
