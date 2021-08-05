@@ -375,3 +375,75 @@ Total: 3.138400 ms (FindLiveObjects: 0.353400 ms CreateObjectMapping: 0.202500 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007091 seconds.
+Begin MonoManager ReloadAssembly
+Error: Could not load signature of Unity.Android.Logcat.AndroidLogcat:.ctor due to: Could not load file or assembly 'UnityEditor.Android.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:UnityEditor.Android.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+0x00007ff75840f02c (Unity) StackWalker::GetCurrentCallstack
+0x00007ff758417409 (Unity) StackWalker::ShowCallstack
+0x00007ff7598dfafc (Unity) GetStacktrace
+0x00007ff75a9baf63 (Unity) DebugStringToFile
+0x00007ff7582359eb (Unity) ScanForAttributesAndInterfaceImplementations
+0x00007ff758248dba (Unity) MonoManager::EndReloadAssembly
+0x00007ff75824ffe9 (Unity) MonoManager::ReloadAssembly
+0x00007ff7595ea2a1 (Unity) LoadDomainAndUserAssemblies
+0x00007ff7595ea74e (Unity) LoadUserAssemblies
+0x00007ff759a139e9 (Unity) <lambda_fe9441f73272b7bdb4fc543a788e7929>::operator()
+0x00007ff759addd82 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff759adfee0 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff759ae366e (Unity) asio::io_service::run
+0x00007ff759a59ba0 (Unity) RunAssetImportWorkerClientV2
+0x00007ff759a59bf0 (Unity) RunAssetImporterV2
+0x00007ff758f77ee6 (Unity) Application::InitializeProject
+0x00007ff7598ed0b2 (Unity) WinMain
+0x00007ff75b750c66 (Unity) __scrt_common_main_seh
+0x00007ffc0a107034 (KERNEL32) BaseThreadInitThunk
+0x00007ffc0b982651 (ntdll) RtlUserThreadStart
+
+Unloading broken assembly Library/ScriptAssemblies/Unity.Mobile.AndroidLogcat.Editor.dll, this assembly can cause crashes in the runtime
+0x00007ff75840f02c (Unity) StackWalker::GetCurrentCallstack
+0x00007ff758417409 (Unity) StackWalker::ShowCallstack
+0x00007ff7598dfafc (Unity) GetStacktrace
+0x00007ff75a9baf63 (Unity) DebugStringToFile
+0x00007ff758251b39 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff75824910c (Unity) MonoManager::EndReloadAssembly
+0x00007ff75824ffe9 (Unity) MonoManager::ReloadAssembly
+0x00007ff7595ea2a1 (Unity) LoadDomainAndUserAssemblies
+0x00007ff7595ea74e (Unity) LoadUserAssemblies
+0x00007ff759a139e9 (Unity) <lambda_fe9441f73272b7bdb4fc543a788e7929>::operator()
+0x00007ff759addd82 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff759adfee0 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff759ae366e (Unity) asio::io_service::run
+0x00007ff759a59ba0 (Unity) RunAssetImportWorkerClientV2
+0x00007ff759a59bf0 (Unity) RunAssetImporterV2
+0x00007ff758f77ee6 (Unity) Application::InitializeProject
+0x00007ff7598ed0b2 (Unity) WinMain
+0x00007ff75b750c66 (Unity) __scrt_common_main_seh
+0x00007ffc0a107034 (KERNEL32) BaseThreadInitThunk
+0x00007ffc0b982651 (ntdll) RtlUserThreadStart
+
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.690 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 134.1 MB.
+System memory in use after: 134.3 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3712.
+Total: 5.076000 ms (FindLiveObjects: 0.658700 ms CreateObjectMapping: 0.771800 ms MarkObjects: 3.605800 ms  DeleteObjects: 0.037700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
