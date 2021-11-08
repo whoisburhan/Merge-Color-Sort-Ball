@@ -135,4 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BallOrder: 5
+  BallParticleColor: {r: 0, g: 0.6509434, b: 0.36733082, a: 1}
   BallNo: 0
+  IsDetectable: 0

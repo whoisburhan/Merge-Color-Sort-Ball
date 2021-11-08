@@ -17,10 +17,12 @@ public class BannerAds : MonoBehaviour
 
     void Start()
     {
+#if UNITY_ANDROID || UNITY_IOS
         if(!Advertisement.isInitialized)
             Advertisement.Initialize(gameID, testMode);
 
         StartCoroutine(ShowBannerWhenInitialized());
+#endif
     }
 
     IEnumerator ShowBannerWhenInitialized()

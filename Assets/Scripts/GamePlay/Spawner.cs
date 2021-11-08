@@ -98,18 +98,23 @@ namespace GS.MergerColorSortBall
                 {
                     _ball.BallNo = SpawnObjectNo;
                     _ball.IsDetectable = true;
+                    OnBallDestroyParticle.transform.position = _ball.transform.position;
+                    OnBallDestroyParticleSpawn(_ball.BallParticleColor);
                 }
             }
-            else
-            {
-                OnBallDestroyParticleSpawn();
-            }
+            //else
+            //{
+            //    OnBallDestroyParticleSpawn();
+            //}
         }
 
-        private void OnBallDestroyParticleSpawn()
+        private void OnBallDestroyParticleSpawn(Color color)
         {
             if (OnBallDestroyParticle != null)
             {
+                var main = OnBallDestroyParticle.main;
+                main.startColor = color;
+
                 if (OnBallDestroyParticle.isPlaying)
                     OnBallDestroyParticle.Stop();
                 OnBallDestroyParticle.Play();

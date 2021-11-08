@@ -41,10 +41,12 @@ namespace GS.CommonStuff
 
         private void Start()
         {
+#if UNITY_ANDROID || UNITY_IOS
             Advertisement.AddListener(this);
 
             if (!Advertisement.isInitialized)
                 Advertisement.Initialize(GAME_ID, testMode);
+#endif
         }
 
         public bool IsReady(string placementId)

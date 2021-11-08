@@ -7,6 +7,8 @@ namespace GS.MergerColorSortBall
     public class Ball : MonoBehaviour
     {
         public int BallOrder;
+        public Color BallParticleColor;
+
         [HideInInspector] public int BallNo;
         [HideInInspector] public bool IsDetectable;
 
