@@ -31,7 +31,7 @@ public class BannerAds : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
         }
-        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
+        Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
         Advertisement.Banner.Show(placement);
         /*if (Advertisement.Banner.isLoaded)
         {
