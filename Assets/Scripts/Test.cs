@@ -117,5 +117,6 @@ public class Test : MonoBehaviour
         Debug.Log("A");
         Debug.Log("A");
         Debug.Log("A");
+        Debug.Log("A");
     }
 }
