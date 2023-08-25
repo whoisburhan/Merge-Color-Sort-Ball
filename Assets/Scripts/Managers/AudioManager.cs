@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            
         }
     }
 
@@ -57,16 +57,17 @@ public class AudioManager : MonoBehaviour
     /// <param name="_audioClipIndex"></param>
     public void AudioChangeFunc(int _audioSource, int _audioClipIndex, bool _isLoop = false, float _pitch = 1f, float _volume = 1f)
     {
-        if (audioSource[_audioSource].isPlaying)
-        {
-            audioSource[_audioSource].Stop();
-        }
+        //if (audioSource[_audioSource].isPlaying)
+        //{
+        //    audioSource[_audioSource].Stop();
+        //}
 
       //  audioSource[_audioSource].pitch = _pitch;
        // audioSource[_audioSource].volume = _volume;
-        audioSource[_audioSource].loop = _isLoop;
-        audioSource[_audioSource].clip = sounds[_audioClipIndex];
-        audioSource[_audioSource].Play();
+        //audioSource[_audioSource].loop = _isLoop;
+        //audioSource[_audioSource].clip = sounds[_audioClipIndex];
+        //audioSource[_audioSource].Play();
+        audioSource[_audioSource].PlayOneShot(sounds[_audioClipIndex]);
     }
 
     public void MusicVolumeIncrese()

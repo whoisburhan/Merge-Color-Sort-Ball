@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/StartMenu/StartMenu/UtilityScene.unity
     guid: 12d5d95730cb9f145b58bf746df4971d
   - enabled: 1
-    path: Assets/StartMenu/StartMenu/StartMenu.unity
+    path: Assets/StartMenu/StartMenu/MainMenu.unity
     guid: 7b95b7187c2a64146b4f13f988e61ec3
   - enabled: 1
     path: Assets/Scenes/MergeBall.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/FreeSwipe/Scene/FreeSwipe.unity
+    guid: e95fcd908eb34e9459be2c927f89b319
   m_configObjects: {}

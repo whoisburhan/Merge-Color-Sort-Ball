@@ -19,6 +19,7 @@ namespace GS.MergerColorSortBall
                     if (Spawner.Instance.CurrentBall != null)
                     {
                         var _pos = Camera.main.ScreenToWorldPoint(touch.position);
+
                         Spawner.Instance.CurrentBall.transform.position = new Vector3(_pos.x, Spawner.Instance.CurrentBall.transform.position.y);
 
                         if (touch.phase == TouchPhase.Ended)
@@ -27,13 +28,36 @@ namespace GS.MergerColorSortBall
                             Spawner.Instance.CurrentBall = null;
                             Spawner.Instance.Spawn();
 
-                           // if (AudioManager.Instance != null)
-                           //     AudioManager.Instance.AudioChangeFunc(0, 1);
+                            if (AudioManager.Instance != null)
+                            {
+                                AudioManager.Instance.AudioChangeFunc(0, 1);
+                            }
                         }
                     }
                 }
 
+                else if (Input.GetMouseButtonDown(0))
+                {
+                    if (Spawner.Instance.CurrentBall != null)
+                    {
+                        var _pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                        Spawner.Instance.CurrentBall.transform.position = new Vector3(_pos.x, Spawner.Instance.CurrentBall.transform.position.y);
+
+                        Spawner.Instance.CurrentBall.GetComponent<Rigidbody2D>().isKinematic = false;
+                        Spawner.Instance.CurrentBall = null;
+                        Spawner.Instance.Spawn();
+
+                        if (AudioManager.Instance != null)
+                        {
+                            AudioManager.Instance.AudioChangeFunc(0, 1);
+                        }
+                    }
+                }
             }
+       
         }
+
+        
     }
 }

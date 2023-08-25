@@ -28,7 +28,7 @@ namespace GS.MergerColorSortBall
                         AudioManager.Instance.AudioChangeFunc(0, 0);
                     }
 
-                    Destroyer.Instance.score += (BallOrder + 1) * 5;
+                    Destroyer.Instance.Score += (BallOrder + 1) * 5;
                     Spawner.Instance.QuickSpawn(BallOrder + 1, collision.transform.position);
                     Spawner.Instance.Balls[BallOrder].Enqueue(collision.gameObject);
                     collision.gameObject.SetActive(false);
